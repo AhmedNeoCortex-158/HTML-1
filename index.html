@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دار الأيتام - تواصل وتبرع وتبني</title>
+  <!-- Bootstrap لتسهيل التصميم -->
+  <link rel="stylesheet" href="style.css">
+ <!-- شريط التنقل -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">دار الأيتام</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="#home">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="#adoption">التبني</a></li>
+        <li class="nav-item"><a class="nav-link" href="#donation">التبرع</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </nav>
+</head>
+<body> 
+  
+
+  
+  <!-- قسم الهيرو (الرئيسية) -->
+  <header id="home" class="hero">
+    <div>
+      <h1 class="display-4">دار الأيتام المتطورة</h1>
+      <p class="lead">بالحب والرعاية نبني مستقبلًا مشرقًا لأطفالنا</p>
+    </div>
+  </header>
+  
+  <!-- قسم "من نحن" مع معرض صور -->
+  <section id="about" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">من نحن</h2>
+      <p>
+        نحن مؤسسة رائدة في رعاية الأطفال، نوفر بيئة متطورة مليئة بالحب والدعم. نقدم برامج تعليمية وترفيهية وصحية تضمن تنمية شاملة لأطفالنا.
+      </p>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="photo 2.jpg" alt="طفل 1" class="child-img">
+        </div>
+        <div class="col-md-4">
+          <img src="photo 3.jpg" alt="طفل 2" class="child-img">
+        </div>
+        <div class="col-md-4">
+          <img src="photo 4.jpg" alt="طفل 3" class="child-img">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- قسم "التبني" -->
+  <section id="adoption" class="section">
+    <div class="container">
+      <h2 class="text-center">التبني</h2>
+      <p>إذا كنت ترغب في تبني طفل وتقديم الرعاية له، الرجاء تعبئة النموذج التالي:</p>
+      <form id="adoptionForm">
+        <div class="form-group">
+          <label for="fullName">الاسم الكامل</label>
+          <input type="text" class="form-control" id="fullName" required>
+        </div>
+        <div class="form-group">
+          <label for="emailAdoption">البريد الإلكتروني</label>
+          <input type="email" class="form-control" id="emailAdoption" required>
+        </div>
+        <div class="form-group">
+          <label for="messageAdoption">رسالة</label>
+          <textarea class="form-control" id="messageAdoption" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- قسم "التبرع" -->
+  <section id="donation" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">التبرع</h2>
+      <p>ساهم في دعم أطفالنا عبر نظام تبرعات آمن:</p>
+      <form id="donationForm">
+        <div class="form-group">
+          <label for="donationAmount">المبلغ (بالريال)</label>
+          <input type="number" class="form-control" id="donationAmount" required>
+        </div>
+        <div class="form-group">
+          <label for="donorEmail">البريد الإلكتروني</label>
+          <input type="email" class="form-control" id="donorEmail" required>
+        </div>
+        <button type="submit" class="btn btn-success">تبرع الآن</button>
+      </form>
+      <div id="donationSuccess" class="alert alert-success mt-3" style="display:none;">
+        شكرًا لتبرعك! ستصل مساعدتك قريبًا.
+      </div>
+    </div>
+  </section>
+  
+  <!-- قسم "تواصل معنا" -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center">تواصل معنا</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="contactName">الاسم</label>
+          <input type="text" class="form-control" id="contactName" required>
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">البريد الإلكتروني</label>
+          <input type="email" class="form-control" id="contactEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">رسالة</label>
+          <textarea class="form-control" id="contactMessage" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-info">إرسال</button>
+      </form>
+    </div>
+  </section>
+  <!-- نافذة التسجيل (Modal) -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="registrationModalLabel"> سجل معنا</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="إغلاق">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>يرجى التسجيل لمتابعة العملية.</p>
+          <form id="modalRegisterForm">
+            <div class="form-group">
+              <label for="modalRegName">الاسم الكامل</label>
+              <input type="text" id="modalRegName" class="form-control" placeholder="أدخل اسمك" required>
+            </div>
+            <div class="form-group">
+              <label for="modalRegEmail">البريد الإلكتروني</label>
+              <input type="email" id="modalRegEmail" class="form-control" placeholder="أدخل بريدك" required>
+            </div>
+            <div class="form-group">
+              <label for="modalRegPassword">كلمة المرور</label>
+              <input type="password" id="modalRegPassword" class="form-control" placeholder="أدخل كلمة المرور" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">تسجيل</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- تذييل الموقع -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>© 2025 دار الأيتام - جميع الحقوق محفوظة</p>
+  </footer>
+  
+  <!-- تضمين ملفات JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
